@@ -1,6 +1,6 @@
 # STM32F103 CMSIS Programming Guide
-This repo is a basic programming guide for the STM32F103 using CMSIS core and  Arm Embedded GCC compiler
-Each file contain a main.c file that contain source code for a certain feature 
-or peripheral from the STM32F1.
-
-Compile the code with keil uvision 5.
+All programs are written in C and form a basic programming guide for the STM32F103 using
+CMSIS core and rely on the arm-none-eabi GCC toolchain.
+Each file contain a main.c file that contains source code for a certain feature 
+or peripheral of the STM32F1.
+ 
