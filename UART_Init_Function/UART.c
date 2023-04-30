@@ -152,3 +152,26 @@ void transmit_string(uint8_t USART, uint8_t* data, uint16_t length)
 	
 	
 }
+
+uint8_t receive_char(uint8_t USART) // receive a charcter via UART
+{
+		char c;
+	
+	if(USART == 1)
+	{
+		while((USART1->SR & USART_SR_RXNE) == 0);
+		c = USART1->DR;
+	}
+	else if(USART == 2)
+	{
+		while((USART2->SR & USART_SR_RXNE) == 0);
+		c = USART2->DR;
+	}
+	else
+	{
+		while((USART3->SR & USART_SR_RXNE) == 0);
+		c = USART3->DR;
+	}
+	
+	return c;
+}
